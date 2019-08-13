@@ -1,7 +1,7 @@
 # Use an official Python runtime as a parent image
 FROM python:latest
 
-MAINTAINER MANIVANNAN.C
+PRATHEEP ANAGANI
 
 # Set the working directory to /app
 WORKDIR /app
