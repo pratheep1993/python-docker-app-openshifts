@@ -6,14 +6,14 @@ node{
       }
    
    stage('Docker Build') {
-     def app = docker.build "python_web/pratheep1993"
+     def app = docker.build "pratheep1993/pratheep1993"
     }
    
    stage("Tag & Push image"){
       withDockerRegistry([credentialsId: 'dockerID',url: ""]) {
-          sh 'docker tag python_web/pratheep1993 python_web/pratheep1993:dev'
-          sh 'docker push python_web/pratheep1993s:dev'
-          sh 'docker push python_web/pratheep1993:latest'
+          sh 'docker tag pratheep1993/pratheep1993 pratheep1993/pratheep1993:dev'
+          sh 'docker push pratheep1993/pratheep1993s:dev'
+          sh 'docker push pratheep1993/pratheep1993:latest'
       }
     }
    
